@@ -14,14 +14,38 @@ class Database {
         
         $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
         ];
         
         try {
             $this->conn = new PDO($dsn, $config['username'], $config['password'], $options);
-            echo "Connected to database";
         } catch (PDOException $e) {
             throw new Exception("Connection failed:{$e->getMessage()}");
         }
+    }
+
+    /**
+     * Query the database
+     * 
+     * @param string $query
+     * 
+     * @return PDOStatement
+     * @throws PDOException
+     */
+    public function query($query, $params = [])
+    {
+        try {
+            $sth = $this->conn->prepare($query);
+
+            // Bind names parameters
+            foreach($params as $param => $value) {
+                $sth->bindValue(':' . $param, $value);
+            }
+            $sth->execute();
+            return $sth;
+        } catch (PDOException $e) {
+            throw new Exception("Query failed:{$e->getMessage()}");
+        }
+
     }
 }
