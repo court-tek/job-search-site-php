@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Get the base path
  * 
@@ -7,7 +6,7 @@
  * @return string
  */
 function basePath($path = '') {
-    return __DIR__ . '/' . $path;
+    return dirname(__DIR__) . '/' . $path;
 }
 
 /**
@@ -18,7 +17,7 @@ function basePath($path = '') {
  * 
  */
 function loadView($name, $data = []) {
-    $viewPath = basePath("resources/views/{$name}.php");
+    $viewPath = basePath("../App/views/{$name}.php");
 
     if (file_exists($viewPath)) {
         extract($data);
@@ -36,7 +35,7 @@ function loadView($name, $data = []) {
  * 
  */
 function loadPartial($name) {
-    $partialPath = basePath("resources/views/partials/{$name}.php");
+    $partialPath = basePath("../App/views/partials/{$name}.php");
 
     if (file_exists($partialPath)) {
         require $partialPath;
