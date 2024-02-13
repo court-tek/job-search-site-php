@@ -56,10 +56,37 @@ class ListingController
 
         $newListingData = array_intersect_key($_POST, array_flip($allowedFields));
 
-        $newListingData['user_id'] = 1;
+        $newListingData['user_id'] = 1;                     
 
         $newListingData = array_map('sanitize', $newListingData);
 
-        inspectAndDie($newListingData);
+        $requiredFields = ['title', 'description', 'email', 'city', 'state'];
+
+        $errors = [];
+
+        foreach ($requiredFields as $field) {
+            if (empty($newListingData[$field]) || !Validation::string($newListingData[$field])) {
+                $errors[$field] = ucfirst($field) . ' is required';
+            }
+        }
+        
+        if (!empty($errors)) {
+            // Reload with errors
+            loadView('listings/new', [
+                'errors' => $errors,
+                'listing' => $newListingData
+            ]);
+        } else {
+            // Submit data
+           $fields = [];
+           
+            foreach ($newListingData as $field => $value) {
+                $fields[] = $field;
+            }
+
+            $fields = implode(', ',  $fields); 
+
+            inspectAndDie($fields);
+        }
     }
 }   
