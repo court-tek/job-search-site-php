@@ -142,7 +142,9 @@ class ListingController
             return;
         }
 
-        inspectAndDie($listing);
+        $this->db->query('DELETE FROM listings WHERE id = :id', $params); 
+
+        redirect('/listings');
     }
 
 
