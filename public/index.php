@@ -20,7 +20,3 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 // Route the request
 $router->route($uri);
-
-$greeting = $_ENV['GREETING'];
-
-inspectAndDie($greeting);
