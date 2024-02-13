@@ -8,3 +8,7 @@ body {
     color: white;
     padding: 0.3rem;
 }
+
+.invisible {
+    display: none;
+}
