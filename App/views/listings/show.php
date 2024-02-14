@@ -1,4 +1,4 @@
-<?php loadPartial('head') ?>
+<?php loadPartial('head') ?> 
 <?php loadPartial('navigation') ?>
 <?php loadPartial('top-banner') ?>
     <section class="container mx-auto p-4 mt-4">
