@@ -1,13 +1,11 @@
 window.onload = () => {
-    let getDetailsBtn = document.querySelector('.parent');
+    // varialbles
     let ajaxButtons = document.querySelectorAll('.btn');
-    let ajaxButton = document.querySelector('.btn');
-    let ajaxId = ajaxButton.getAttribute('data-listingId');
-    // let dataListingId = 
+    let array = ['james', 'michael', 'johnny', 'mike'];
 
+    // functions
     ajaxButtons.forEach(element => {
         element.addEventListener('click', (e) => {
-            console.log(e.target.attributes.datalistingId.nodeValue);
             fetch(`http://localhost:3000/api/single_listing/${e.target.attributes.datalistingId.nodeValue}`)
             .then((response) => {
                 if (!response.ok) {
@@ -19,7 +17,7 @@ window.onload = () => {
             })
             .then(data => {
                 const Object1 = data;
-                console.log(Object.values(Object1));
+                // console.log(Object.values(Object1));
                 const jobTitle = document.querySelector('.listings__job-title');
                 const pCompanyName = document.querySelector('.listings__company-name');
                 const pSalary = document.querySelector('.listings__salary');
@@ -36,7 +34,6 @@ window.onload = () => {
                 console.log('something went wrong with fetch!');
                 console.log(err);
             });
-            })
+        })
     });
-    
 }

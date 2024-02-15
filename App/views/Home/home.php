@@ -29,7 +29,7 @@
                         </li>
                     <?php endif; ?>
                   </ul>
-                  <a href="/listing/<?= $listing->id ?>" class="">Details</a>
+                  <a href="/listing/<?= $listing->id ?>" class="<?php echo ($_SERVER['REQUEST_URI'] == '/') ? 'invisible' : '' ?>">Details</a>
                   <button class="btn" dataListingId="<?= $listing->id ?>">My names' Ajax</button>
                 </div>
               </div>
@@ -37,7 +37,7 @@
           <?php endforeach; ?>
           </div>
           <div class="listings__right">
-              <h2 class="listings__job-title"></h2>
+              <h2 class="listings__job-git title"></h2>
               <p class="listings__company-name"></p>
               <p class="listings__salary"></p>
               <a href="mailto:manager@company.com" class="">Apply Now</a>
@@ -49,7 +49,6 @@
                   <div class="listings__details-salary"></div>
                 </div>
                 <div class="child">child 2</div>
-                <div class="child">child 3</div>
               </div>
               <!-- location -->
               <div class="listings__location-container">
