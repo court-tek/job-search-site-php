@@ -3,8 +3,46 @@
 @import url('reset.css');
 
 :root {
-    
-}
+    /* App color pallete */
+    --endeed-dark-ensign: #2557A7;
+    --endeed-negro: #2C2C2C;
+    /* App color pallete */
+    --clarksgold: hsl(39, 97%, 65%);
+    --grisbg: hsl(0, 0%, 95%);
+    --cyan: hsl(180, 68%, 65%);
+    --limebg: hsl(101, 98%, 76%);
+    --banana-creme: hsl(54, 100%, 92%);
+    --fusha: hsl(283, 97%, 66%);
+    --rosada-custom: hsl(344, 92%, 85%);
+    --blanco: hsl(180, 100%, 100%);
+    --rojo: hsl(0, 100%, 50%);
+    --naranja: hsl(39, 100%, 50%);
+    --amarillo: hsl(60, 100%, 50%);
+    --negro: hsl(0, 0%, 0%);
+    --charcoal: hsl(232, 6%, 25%);
+    --hulk: hsl(133, 22%, 21%);
+    --soot: hsl(0, 0%, 40%);
+    --sashagrey: hsl(0, 0%, 83%);
+    --azulyoscuro: hsl(215, 59%, 53%);
+    --testcolor: hsl(330, 100%, 71%);
+    --variable10: #333333;
+    --faintgrey: hsl(0, 0%, 80%);
+    --modalBackground: hsla(0, 0%, 0%, 0.7);
+    --salmon: hsl(10, 100%, 80%);
+    --mobileNavBg: hsl(0, 0%, 20%);
+    --greyShade: hsl(0, 0%, 26%);
+    --greyShade0: hsl(0, 0%, 52%);
+    --darkCharcoal: hsl(0, 0%, 16%);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--blanco);
+  }
 
 .danger-message {
     background-color: #FF7F7F;

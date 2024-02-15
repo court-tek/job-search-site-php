@@ -1,12 +1,83 @@
 /* This applies from 0px to 768 */
+.header {
+    /* background-color: var(--rojo); */
+    border-bottom: 1px solid var(--sashagrey);
+    margin-bottom: 20px;
+}
 
+.header__container {
+    display: flex;
+    display: column;
+}
+
+.header__navigationL {
+    display: flex;
+}
   
 /* This applies from 768px onwards */
 @media (min-width: 768px) {
    
 }
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    /* header styles */
+    .header__container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .header__navigationL {}
+
+    .header__logo {
+        padding: 20px;
+        text-decoration: none;
+    }
+    
+    .header__logo a {
+        color: var(--endeed-dark-ensign);
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: lowercase;
+    }
+
+    .header__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__menu-link {
+        padding: 20px;
+        color: var(--negro);
+        text-decoration: none;
+    }
+
+    .header__menu-link:hover, .header__menu-link--active {
+        border-bottom: 2px solid var(--endeed-dark-ensign);
+    }
+
+    .header__logo {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+    }
+
+    .header__account {
+        padding: 20px;
+    }
+
+    .header__signin-link {
+        color: var(--endeed-dark-ensign);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .header__new-post-link {
+        color: var(--endeed-negro);
+        font-size: 1rem;
+        text-decoration: none;
+    }
+    /* header styles end here */
+}
   
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {}
