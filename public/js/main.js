@@ -6,6 +6,7 @@ window.onload = () => {
     // functions
     ajaxButtons.forEach(element => {
         element.addEventListener('click', (e) => {
+            console.log(e.target);
             fetch(`http://localhost:3000/api/single_listing/${e.target.attributes.datalistingId.nodeValue}`)
             .then((response) => {
                 if (!response.ok) {
@@ -16,19 +17,20 @@ window.onload = () => {
                 }
             })
             .then(data => {
+                console.log(data);
                 const Object1 = data;
-                // console.log(Object.values(Object1));
+                // // console.log(Object.values(Object1));
                 const jobTitle = document.querySelector('.listings__job-title');
-                const pCompanyName = document.querySelector('.listings__company-name');
-                const pSalary = document.querySelector('.listings__salary');
-                const pDetailsSalary = document.querySelector('.listings__details-salary');
-                const listingLocation = document.querySelector('.listings__location');
+                // const companyName = document.querySelector('.listings__company-name');
+                // const pSalary = document.querySelector('.listings__salary');
+                // const pDetailsSalary = document.querySelector('.listings__details-salary');
+                // const listingLocation = document.querySelector('.listings__location');
 
                 jobTitle.innerHTML = `${Object.values(Object1)[2]}`; 
-                pCompanyName.innerHTML = `${Object.values(Object1)[6]}`;
-                pSalary.innerHTML = `$${Object.values(Object1)[4]}`;
-                pDetailsSalary.innerHTML = `$${Object.values(Object1)[4]}`;
-                listingLocation.innerHTML = `${Object.values(Object1)[8]}, ${Object.values(Object1)[9]}`;
+                // companyName.innerHTML = `${Object.values(Object1)[6]}`;
+                // pSalary.innerHTML = `$${Object.values(Object1)[4]}`;
+                // pDetailsSalary.innerHTML = `$${Object.values(Object1)[4]}`;
+                // listingLocation.innerHTML = `${Object.values(Object1)[8]}, ${Object.values(Object1)[9]}`;
             })
             .catch((err) => {
                 console.log('something went wrong with fetch!');

@@ -1,7 +1,6 @@
 <?php loadPartial('head') ?>
 <?php loadPartial('navigation') ?>
 <?php loadPartial('showcase-search') ?>
-<?php loadPartial('top-banner') ?>
     <!-- Job Listings -->
     <section>
       <div id="home">
