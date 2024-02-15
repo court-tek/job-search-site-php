@@ -5,7 +5,7 @@ namespace App\Controllers;
 use Framework\Database;
 use Framework\Validation;
 
-class ListingController
+class ApiController
 {
     protected $db;
     
@@ -25,9 +25,9 @@ class ListingController
         // retrieve all items
         $listings = $this->db->query('SELECT * FROM listings')->fetchAll();
 
-        loadView('listings/index', [
-            'listings' => $listings,
-        ]);
+        $listingJSON = json_encode($listings);
+
+        echo $listingJSON;
     }
 
     /**
@@ -52,19 +52,9 @@ class ListingController
             return;
         }
 
-        loadView('listings/show', [
-            'listing' => $listing,
-        ]);
-    }
+        $listingJSON = json_encode($listing);
 
-    /**
-     * Displays the form to add a new listing
-     * 
-     * @return void
-     */
-    public function new()
-    {
-        loadView('listings/new');
+        echo $listingJSON;
     }
 
     /**

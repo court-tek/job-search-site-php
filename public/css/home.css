@@ -1,12 +1,19 @@
 /* This applies from 0px to 768 */
-
+.listings {
+    display: grid;
+    gap: 1em;
+}
   
 /* This applies from 768px onwards */
 @media (min-width: 768px) {
-   
+    
 }
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .listings {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
   
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {}

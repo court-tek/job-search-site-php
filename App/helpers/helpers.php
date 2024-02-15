@@ -45,6 +45,23 @@ function loadPartial($name) {
 }
 
 /**
+ * Load a partial
+ * 
+ * @param string $name
+ * @return void
+ * 
+ */
+function loadPage($name) {
+    $partialPath = basePath("../App/views/{$name}.php");
+
+    if (file_exists($partialPath)) {
+        require $partialPath;
+    } else {
+        echo "Partial Page '{$name} not found!'";
+    }
+}
+
+/**
  * inspect a value(s)
  * 
  * @param mixed $value
