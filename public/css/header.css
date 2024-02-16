@@ -76,6 +76,12 @@
         font-size: 1rem;
         text-decoration: none;
     }
+
+    .header__find-job-link {
+        color: var(--endeed-negro);
+        font-size: 1rem;
+        text-decoration: none;
+    }
     /* header styles end here */
 
     

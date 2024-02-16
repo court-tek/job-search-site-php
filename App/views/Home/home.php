@@ -27,7 +27,6 @@
                       <li>2+ years of PHP development.</li>
                       <li>21 days paid time off.</li>
                     </ul>
-
                     <p class="listings__timestamp">posted 6 days ago</p> 
                   </div>
                 </div>

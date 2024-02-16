@@ -1,4 +1,3 @@
-<?php define('URLROOT', 'http://localhost:8080') ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

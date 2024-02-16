@@ -61,6 +61,11 @@
         color: var(--endeed-grey);
         margin-bottom: 18px;
     }
+
+    .listings__timestamp {
+        font-size: 0.8rem;
+        color: var(--endeed-grey);
+    }
 }
   
 /* Extra large devices (large desktops, 1200px and up) */
