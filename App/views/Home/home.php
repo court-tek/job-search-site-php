@@ -4,41 +4,39 @@
     <!-- Job Listings -->
     <section>
       <div id="home">
-        <div class="title">Recent Jobs</div>
-        <div class="listings">
-          <div class="listings__left">
-          <?php foreach ($listings as $listing) : ?>
-              <!-- Job Listing 1 -->
-              <div class="endeed__listing">
-                <div class="parent">
-                  <h2 class=""><?= $listing->title ?></h2>
-                  <p class="">
-                    <?= $listing->description ?>
-                  </p>
-                  <ul class="">
-                    <li class=""><strong>Salary:</strong> <?= formatSalary($listing->salary) ?></li>
-                    <li class="">
-                      <strong>Location:</strong> <?= $listing->city ?> -
-                      <span class=""><?= $listing->work_environment ?></span>
-                    </li>
-                    <?php if (!empty($listing->tags)) : ?>
-                        <li class="">
-                          <strong>Tags:</strong>
-                          <?= $listing->tags ?>
-                        </li>
-                    <?php endif; ?>
-                  </ul>
-                  <a href="/listing/<?= $listing->id ?>" class="<?php echo ($_SERVER['REQUEST_URI'] == '/') ? 'invisible' : '' ?>">Details</a>
-                  <button class="btn" dataListingId="<?= $listing->id ?>">My names' Ajax</button>
+        <div class="listings__container container">
+          <div class="listings__left" dataListingId="<?= $listing->id ?>">
+            <?php foreach ($listings as $listing) : ?>
+                <!-- Job Listing 1 -->
+                <div class="listings__card-container">
+                  <div class="listings__card">
+                    <h2 class="listings__job-title"><?= $listing->title ?></h2>
+                    <p class="listings__company-name">
+                      <?= $listing->company ?>
+                    </p>
+                    <p class="listings__city-state">
+                      <?= $listing->city ?>, <?= $listing->state ?>
+                    </p>
+                    <div class="listings__tags">
+                      <button class="listings__tag">
+                        <?= formatSalary($listing->salary) ?> - $200,000
+                      </button>
+                    </div>
+                    <ul class="listings__about-job">
+                      <li>This is a full time W2 role with benefits.</li>
+                      <li>2+ years of PHP development.</li>
+                      <li>21 days paid time off.</li>
+                    </ul>
+
+                    <p class="listings__timestamp">posted 6 days ago</p> 
+                  </div>
                 </div>
-              </div>
-              <!-- End Job Listing -->
-          <?php endforeach; ?>
+                <!-- End Job Listing -->
+            <?php endforeach; ?>
           </div>
           <div class="listings__right">
               <h2 class="listings__job-git title"></h2>
               <p class="listings__company-name"></p>
-              <p class="listings__salary"></p>
               <a href="mailto:manager@company.com" class="">Apply Now</a>
               <!-- details -->
               <div class="listings__details-container">

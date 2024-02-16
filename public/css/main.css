@@ -1,11 +1,13 @@
 @import url('header.css');
 @import url('search.css');
-@import url('home.css');
+@import url('listings.css');
 @import url('reset.css');
 
 :root {
     /* App color pallete */
     --endeed-dark-ensign: #2557A7;
+    --endeed-grey: #6F6F6F;
+    --endeed-dark-grey: #595959;
     --endeed-negro: #2C2C2C;
     /* App color pallete */
     --clarksgold: hsl(39, 97%, 65%);

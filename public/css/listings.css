@@ -1,0 +1,66 @@
+/* This applies from 0px to 768 */
+.listings__container {
+    display: grid;
+    gap: 1em;
+}
+  
+/* This applies from 768px onwards */
+@media (min-width: 768px) {
+    
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .listings__container {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+        width: 70%;
+        /* background-color: var(--fusha); */
+    }
+
+    .listings__card-container {
+        border: 1px solid var(--endeed-dark-ensign);
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 14px;
+    }
+
+    .listings__card-container:hover {
+
+    }
+
+    .listings__job-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .listings__company-name {
+        font-size: 0.9rem;
+    }
+
+    .listings__tags .listings__tag {
+        margin-bottom: 18px;
+        background: #F3F2F1;
+        color: var(--endeed-dark-grey);
+        padding: 8px;
+        font-weight: 600;
+        border-radius: 3px;
+        border: none;
+    }
+
+    .listings__city-state {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .listings__about-job {
+        list-style-type: circle;
+        margin-left: 15px;
+        font-size: 0.9rem;
+        color: var(--endeed-grey);
+        margin-bottom: 18px;
+    }
+}
+  
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
