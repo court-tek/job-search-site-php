@@ -55,7 +55,18 @@
                 <p class="listings__right-about-company">
                   We are more than an external IT provider, we are a true ally. Our personalised services and reliable team allow us to be productive and reactive to the new challenges that arise in each project. We have a single mission; to offer solutions that, together, help us achieve our client goals.
                 </p>
-                <p class="listings__right-tags"></p>
+                <h3 class="listings__right-details-title">
+                  Who we are looking for? 
+                </h3>
+                <p class="listings__right-requirements"></p>
+                <h3 class="listings__right-details-title">
+                  Technical Skills 
+                </h3>
+                <p class="listings__right-skills-tags"></p>
+                <h3 class="listings__right-details-title">
+                  What we offer
+                </h3>
+                <p class="listings__right-benefits"></p>
               </div>
           </div>
         </div>

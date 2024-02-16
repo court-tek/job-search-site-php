@@ -24,9 +24,11 @@ window.onload = () => {
                 const companyName1 = document.querySelector('.listings__right-company-name');
                 const companyName2 = document.querySelector('.listings__right-company');
                 const workEnv = document.querySelector('.listings__right-work-environment');
-                const pDetailsSalary = document.querySelector('.listings__right-details-salary');
                 const listingLocation = document.querySelector('.listings__right-location');
                 const jobDescription = document.querySelector('.listings__right-job-description');
+                const jobRequirements = document.querySelector('.listings__right-requirements');
+                const jobSkills = document.querySelector('.listings__right-skills-tags');
+                const jobBenefits = document.querySelector('.listings__right-benefits');
                 const tags = document.querySelector('.listings__right-tags');
                 let str1 = Object.values(Object1)[5];
                 const split_string = str1.split(" ");
@@ -39,6 +41,9 @@ window.onload = () => {
                 workEnv.innerHTML = `${Object.values(Object1)[15]}`;
                 jobDescription.innerHTML = `${Object.values(Object1)[3]}`;
                 companyName2.innerHTML = `${Object.values(Object1)[6]}`;
+                jobRequirements.innerHTML = `${Object.values(Object1)[12]}`;
+                jobSkills.innerHTML = `${Object.values(Object1)[5]}`;
+                jobBenefits.innerHTML = `${Object.values(Object1)[13]}`;
                 split_string.forEach(string => {
                     const tags = document.querySelector('.listings__right-tags');
                     console.log(string);

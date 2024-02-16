@@ -17,6 +17,9 @@
         width: 70%;
         /* background-color: var(--fusha); */
     }
+    .listings__left {
+
+    }
 
     .listings__card-container {
         border: 1px solid var(--endeed-dark-ensign);
@@ -71,6 +74,9 @@
 
     /* job listing right side */
     .listings__right {
+        position: sticky;
+        top: 0;
+        align-self: start;
         border: 1px solid var(--endeed-light-grey);
         border-radius: 8px;
     }
@@ -120,6 +126,9 @@
 
     .listings__right-details-container {
         padding: 40px 20px;
+        position: static;
+        top: 0;
+        height: ;
     }
 
     .listings__right-job-description {
