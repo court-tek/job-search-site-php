@@ -8,7 +8,7 @@
           <div class="listings__left">
             <?php foreach ($listings as $listing) : ?>
                 <!-- Job Listing 1 -->
-                <div dataListingId="<?= $listing->id ?>" class="listings__card-container">
+                <div data-listingid="<?= $listing->id ?>" class="listings__card-container">
                   <div class="listings__card">
                     <h2 class="listings__job-title"><?= $listing->title ?></h2>
                     <p class="listings__company-name">
@@ -34,31 +34,27 @@
             <?php endforeach; ?>
           </div>
           <div class="listings__right">
-              <h2 class="listings__job-git title"></h2>
-              <p class="listings__company-name"></p>
-              <a href="mailto:manager@company.com" class="">Apply Now</a>
+              <h2 class="listings__right-job-title"></h2>
+              <p class="listings__right-company-name"></p>
+              <a href="mailto:manager@company.com" class="listing__right-apply">Apply Now</a>
               <!-- details -->
-              <div class="listings__details-container">
-                <h2 class="listings__section-title">job details</h2>
+              <div class="listings__right-details-container">
+                <h2 class="listings__right-section-title">job details</h2>
                 <div class="">
-                  <h3 class="listings__details-title">pay</h3>
-                  <div class="listings__details-salary"></div>
+                  <h3 class="listings__right-details-title">pay</h3>
+                  <div class="listings__right-details-salary"></div>
                 </div>
                 <div class="child">child 2</div>
               </div>
               <!-- location -->
-              <div class="listings__location-container">
-                <h2 class="listings__section-title">location</h2>
+              <div class="listings__right-location-container">
+                <h2 class="listings__right-section-title">location</h2>
                 <div class="">
-                  <div class="listings__location"></div>
+                  <div class="listings__right-location"></div>
                 </div>
               </div>
           </div>
         </div>
-        <a href="/listings" class="">
-          <i class=""></i>
-          Show All Jobs
-        </a>
       </div>
     </section>
     <!-- end Job Listings -->

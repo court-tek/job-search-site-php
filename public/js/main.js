@@ -1,13 +1,22 @@
 window.onload = () => {
     // varialbles
-    let ajaxButtons = document.querySelectorAll('.btn');
+    let listingCard = document.querySelectorAll('.listings__card-container');
+    let heading = document.querySelector('.search__heading');
     let array = ['james', 'michael', 'johnny', 'mike'];
 
+    
+    // listingCard.forEach(element => {
+    //     element.addEventListener('click', function(e) {
+    //         console.log(element.dataset.listingid);
+    //         console.log(e);
+    //     })
+    // })
     // functions
-    ajaxButtons.forEach(element => {
+    listingCard.forEach(element => {
         element.addEventListener('click', (e) => {
-            console.log(e.target);
-            fetch(`http://localhost:3000/api/single_listing/${e.target.attributes.datalistingId.nodeValue}`)
+            const id = element.dataset.listingid;
+            // console.log(e.target.attributes.datalistingId.nodeValue);
+            fetch(`http://localhost:3000/api/single_listing/${id}`)
             .then((response) => {
                 if (!response.ok) {
                     console.log('ERRRRRR not Status: 200');
@@ -20,11 +29,11 @@ window.onload = () => {
                 console.log(data);
                 const Object1 = data;
                 // // console.log(Object.values(Object1));
-                const jobTitle = document.querySelector('.listings__job-title');
-                // const companyName = document.querySelector('.listings__company-name');
-                // const pSalary = document.querySelector('.listings__salary');
-                // const pDetailsSalary = document.querySelector('.listings__details-salary');
-                // const listingLocation = document.querySelector('.listings__location');
+                const jobTitle = document.querySelector('.listings__right-job-title');
+                // const companyName = document.querySelector('.listings__right-company-name');
+                // const pSalary = document.querySelector('.listings__right-salary');
+                // const pDetailsSalary = document.querySelector('.listings__right-details-salary');
+                // const listingLocation = document.querySelector('.listings__right-location');
 
                 jobTitle.innerHTML = `${Object.values(Object1)[2]}`; 
                 // companyName.innerHTML = `${Object.values(Object1)[6]}`;
