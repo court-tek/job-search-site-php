@@ -34,6 +34,7 @@
             <?php endforeach; ?>
           </div>
           <div class="listings__right">
+            <div class="listings__right-card">
               <div class="listings__right-header">
                 <h2 class="listings__right-job-title"></h2>
                 <p class="listings__right-company-name"></p>
@@ -68,6 +69,7 @@
                 </h3>
                 <p class="listings__right-benefits"></p>
               </div>
+            </div>
           </div>
         </div>
       </div>

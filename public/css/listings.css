@@ -77,10 +77,14 @@
         position: sticky;
         top: 0;
         align-self: start;
+        padding: 20px 0 0;
+    }
+    
+    .listings__right-card {
         border: 1px solid var(--endeed-light-grey);
         border-radius: 8px;
     }
-    
+
     .listings__right-header {
         border-bottom: 2px solid var(--endeed-light-grey);
         padding: 20px;
@@ -126,9 +130,6 @@
 
     .listings__right-details-container {
         padding: 40px 20px;
-        position: static;
-        top: 0;
-        height: ;
     }
 
     .listings__right-job-description {
