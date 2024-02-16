@@ -1,16 +1,7 @@
 window.onload = () => {
     // varialbles
     let listingCard = document.querySelectorAll('.listings__card-container');
-    let heading = document.querySelector('.search__heading');
-    let array = ['james', 'michael', 'johnny', 'mike'];
 
-    
-    // listingCard.forEach(element => {
-    //     element.addEventListener('click', function(e) {
-    //         console.log(element.dataset.listingid);
-    //         console.log(e);
-    //     })
-    // })
     // functions
     listingCard.forEach(element => {
         element.addEventListener('click', (e) => {
@@ -28,18 +19,30 @@ window.onload = () => {
             .then(data => {
                 console.log(data);
                 const Object1 = data;
-                // // console.log(Object.values(Object1));
+                console.log(Object.values(Object1));
                 const jobTitle = document.querySelector('.listings__right-job-title');
-                // const companyName = document.querySelector('.listings__right-company-name');
-                // const pSalary = document.querySelector('.listings__right-salary');
-                // const pDetailsSalary = document.querySelector('.listings__right-details-salary');
-                // const listingLocation = document.querySelector('.listings__right-location');
+                const companyName1 = document.querySelector('.listings__right-company-name');
+                const companyName2 = document.querySelector('.listings__right-company');
+                const workEnv = document.querySelector('.listings__right-work-environment');
+                const pDetailsSalary = document.querySelector('.listings__right-details-salary');
+                const listingLocation = document.querySelector('.listings__right-location');
+                const jobDescription = document.querySelector('.listings__right-job-description');
+                const tags = document.querySelector('.listings__right-tags');
+                let str1 = Object.values(Object1)[5];
+                const split_string = str1.split(" ");
+                
 
+                //Output = ["Hire", "the", "top", "1%", "freelance", "developers"]
                 jobTitle.innerHTML = `${Object.values(Object1)[2]}`; 
-                // companyName.innerHTML = `${Object.values(Object1)[6]}`;
-                // pSalary.innerHTML = `$${Object.values(Object1)[4]}`;
-                // pDetailsSalary.innerHTML = `$${Object.values(Object1)[4]}`;
-                // listingLocation.innerHTML = `${Object.values(Object1)[8]}, ${Object.values(Object1)[9]}`;
+                companyName1.innerHTML = `${Object.values(Object1)[6]}`;
+                listingLocation.innerHTML = `${Object.values(Object1)[8]}, ${Object.values(Object1)[9]}`;
+                workEnv.innerHTML = `${Object.values(Object1)[15]}`;
+                jobDescription.innerHTML = `${Object.values(Object1)[3]}`;
+                companyName2.innerHTML = `${Object.values(Object1)[6]}`;
+                split_string.forEach(string => {
+                    const tags = document.querySelector('.listings__right-tags');
+                    console.log(string);
+                })
             })
             .catch((err) => {
                 console.log('something went wrong with fetch!');

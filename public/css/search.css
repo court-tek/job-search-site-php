@@ -1,7 +1,7 @@
 /* This applies from 0px to 768 */
 .search {
     /* background-color: var(--rojo); */
-    border-bottom: 1px solid var(--sashagrey);
+    border-bottom: 1px solid var(--endeed-light-grey);
     margin-bottom: 20px;
     padding: 10px 20px 20px 20px;
 }

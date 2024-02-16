@@ -34,24 +34,28 @@
             <?php endforeach; ?>
           </div>
           <div class="listings__right">
-              <h2 class="listings__right-job-title"></h2>
-              <p class="listings__right-company-name"></p>
-              <a href="mailto:manager@company.com" class="listing__right-apply">Apply Now</a>
+              <div class="listings__right-header">
+                <h2 class="listings__right-job-title"></h2>
+                <p class="listings__right-company-name"></p>
+                <div class="listings__right-location-container">
+                    <div class="listings__right-location"></div> 
+                    <span class="listings__right-spacer">-</span>
+                    <span class="listings__right-work-environment"></span>
+                </div>
+                <a href="mailto:manager@company.com" class="listings__right-apply">Apply Now</a>
+              </div>
+              </p>
               <!-- details -->
               <div class="listings__right-details-container">
-                <h2 class="listings__right-section-title">job details</h2>
-                <div class="">
-                  <h3 class="listings__right-details-title">pay</h3>
-                  <div class="listings__right-details-salary"></div>
-                </div>
-                <div class="child">child 2</div>
-              </div>
-              <!-- location -->
-              <div class="listings__right-location-container">
-                <h2 class="listings__right-section-title">location</h2>
-                <div class="">
-                  <div class="listings__right-location"></div>
-                </div>
+                <p class="listings__right-job-description"></p>
+
+                <h3 class="listings__right-details-title">
+                  About <span class="listings__right-company"></span>
+                </h3>
+                <p class="listings__right-about-company">
+                  We are more than an external IT provider, we are a true ally. Our personalised services and reliable team allow us to be productive and reactive to the new challenges that arise in each project. We have a single mission; to offer solutions that, together, help us achieve our client goals.
+                </p>
+                <p class="listings__right-tags"></p>
               </div>
           </div>
         </div>
