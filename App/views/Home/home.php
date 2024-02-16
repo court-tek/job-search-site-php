@@ -5,10 +5,10 @@
     <section>
       <div id="home">
         <div class="listings__container container">
-          <div class="listings__left" dataListingId="<?= $listing->id ?>">
+          <div class="listings__left">
             <?php foreach ($listings as $listing) : ?>
                 <!-- Job Listing 1 -->
-                <div class="listings__card-container">
+                <div dataListingId="<?= $listing->id ?>" class="listings__card-container">
                   <div class="listings__card">
                     <h2 class="listings__job-title"><?= $listing->title ?></h2>
                     <p class="listings__company-name">
