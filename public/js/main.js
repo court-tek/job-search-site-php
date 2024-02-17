@@ -2,7 +2,18 @@ window.onload = () => {
     // varialbles
     let listingCard = document.querySelectorAll('.listings__card-container');
 
-    // functions
+    // functions & loops
+
+    // adds the border active class and removes it when another eloment is clicked
+    for (let i = 0; i < listingCard.length; i++) {
+        listingCard[i].addEventListener("click", function () {
+      
+          listingCard.forEach(element => element.classList.remove("listings--card-active"))
+      
+          listingCard[i].classList.add("listings--card-active");
+        });
+      }
+    // fetch job listing data
     listingCard.forEach(element => {
         element.addEventListener('click', (e) => {
             const id = element.dataset.listingid;
