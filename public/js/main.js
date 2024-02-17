@@ -12,7 +12,8 @@ window.onload = () => {
       
           listingCard[i].classList.add("listings--card-active");
         });
-      }
+    }
+
     // fetch job listing data
     listingCard.forEach(element => {
         element.addEventListener('click', (e) => {

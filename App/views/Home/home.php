@@ -75,5 +75,4 @@
       </div>
     </section>
     <!-- end Job Listings -->
-<?php loadPartial('bottom-banner') ?>
 <?php loadPartial('footer') ?>

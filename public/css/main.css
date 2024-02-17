@@ -1,6 +1,8 @@
 @import url('header.css');
 @import url('search.css');
 @import url('listings.css');
+@import url('new.css');
+@import url('footer.css');
 @import url('reset.css');
 
 :root {
@@ -12,8 +14,9 @@
     --endeed-negro: #2C2C2C;
     --endeed-light-rosa: #FCEEF4;
     --endeed-dark-rosa: #9D2B6B;
+    --endeed-fondo-grey: #FAF9F8;
+    /* App color pallete end */
 
-    /* App color pallete */
     --clarksgold: hsl(39, 97%, 65%);
     --grisbg: hsl(0, 0%, 95%);
     --cyan: hsl(180, 68%, 65%);

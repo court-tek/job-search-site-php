@@ -1,0 +1,41 @@
+/* This applies from 0px to 768 */
+
+  
+/* This applies from 768px onwards */
+@media (min-width: 768px) {
+   
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .new {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .new__media-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        border-radius: 5px;
+        width: 768px;
+    }
+
+    .new__header-container {
+        padding: 30px;
+        background: var(--endeed-fondo-grey);
+        /* display: flex; */
+    }
+
+    .new__header {
+        font-weight: 600;
+        font-size: 1.4rem;
+        width: 50%;
+    }
+
+    .new__image img {
+        height: 180px;
+    }
+
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
