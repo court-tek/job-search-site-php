@@ -19,6 +19,14 @@
     }
     .listings__left {}
 
+    .listings__count-block {
+        margin: 0 0 20px;
+    }
+
+    .listings__count-block .listings__count {
+        font-size: 0.8rem;
+    }
+
     .listings__card-container {
         border: 1px solid var(--endeed-light-grey);
         border-radius: 10px;
@@ -76,6 +84,15 @@
 
     /* job listing right side */
     .listings__right {
+        display: none;
+        position: sticky;
+        top: 0;
+        align-self: start;
+        padding: 20px 0 0;
+    }
+
+    .listings_right--display {
+        display: block;
         position: sticky;
         top: 0;
         align-self: start;

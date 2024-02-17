@@ -10,6 +10,7 @@
    .footer {
         border-top: 1px solid var(--endeed-grey);
         padding: 20px 15px;
+        margin: 25px 0 0;
    } 
 
    .footer__container {

@@ -8,6 +8,9 @@
           <div class="listings__left">
             <?php foreach ($listings as $listing) : ?>
                 <!-- Job Listing 1 -->
+                <div class="listings__count-block">
+                  <p class="listings__count">6 jobs</p>
+                </div>
                 <div data-listingid="<?= $listing->id ?>" class="listings__card-container">
                   <div class="listings__card">
                     <h2 class="listings__job-title"><?= $listing->title ?></h2>

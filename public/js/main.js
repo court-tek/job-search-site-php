@@ -1,16 +1,24 @@
 window.onload = () => {
     // varialbles
     let listingCard = document.querySelectorAll('.listings__card-container');
-
+    let jobInformation = document.querySelector('.listings__right');
     // functions & loops
+
+    // Hide listings right unless job card is clicked
+    let hideElement = () => {
+        listingCard.add
+        jobInformation.classList.add("");
+    }
 
     // adds the border active class and removes it when another eloment is clicked
     for (let i = 0; i < listingCard.length; i++) {
         listingCard[i].addEventListener("click", function () {
       
           listingCard.forEach(element => element.classList.remove("listings--card-active"))
-      
+    //    adds blue border to listings card
           listingCard[i].classList.add("listings--card-active");
+    //    display job information   
+          jobInformation.classList.add("listings_right--display");
         });
     }
 
