@@ -18,6 +18,7 @@
         flex-direction: row;
         border-radius: 5px;
         width: 768px;
+        margin: 0 0 20px;
     }
 
     .new__header-container {
@@ -29,11 +30,18 @@
     .new__header {
         font-weight: 600;
         font-size: 1.4rem;
-        width: 50%;
+        line-height: 1.8rem;
     }
 
     .new__image img {
         height: 180px;
+    }
+
+    .new__redirect-link {
+        font-size: 1.1rem;
+        text-decoration: none;
+        color: var(--endeed-dark-ensign);
+        font-weight: 600;
     }
 
 }

@@ -12,7 +12,7 @@
               <img src="../img/endeed-img-1.png" alt="image">
             </div>
           </div>
-          <a href="/" class="">Cancel</a>
+          <a href="/" class="new__redirect-link">Not here to post a job?</a>
           <?php if (isset($errors)) : ?>
               <?php foreach($errors as $error) : ?>
                   <div class="danger-message">
@@ -20,124 +20,61 @@
                   </div>
               <?php endforeach; ?>
           <?php endif; ?>
-          <div class="mb-4">
-            <input type="text" name="title" placeholder="Job Title" class="" value="<?= $listing['title'] ?? '' ?>"/>
+          <div class="new__post-listing-form">
+            <div class="form-group">
+              <label for="title">Job Title <span>*</span></label>
+              <input type="text" name="title" placeholder="" class="" value="<?= $listing['title'] ?? '' ?>"/>
+            </div>
+            <div class="form-group">
+              <label for="description">Job Description<span>*</span></label>
+              <textarea name="description" placeholder="Job Description" class="" value="<?= $listing['description'] ?? '' ?>"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="salary">Annual Salary<span>*</span></label>
+              <input type="text" name="salary" placeholder="" class="" value="<?= $listing['salary'] ?? '' ?>"/>
+            </div>
+            <div class="form-group">
+              <label for="requirements">Requirements<span>*</span></label>
+              <input type="text" name="requirements" placeholder="Requirements" class="" value="<?= $listing['requirements'] ?? '' ?>"/>
+            </div>
+            <div class="form-group">
+              <label for="benefits">Benefit<span>*</span></label>
+              <input type="text" name="benefits" placeholder="" class="" value="<?= $listing['benefits'] ?? '' ?>"/>
+            </div>
+            <div class="form-group">
+              <label for="tags">Tags<span>*</span></label>
+              <input type="text" name="tags" placeholder="" class="" value="<?= $listing['tags'] ?? '' ?>"/>
+            </div>
+            <div class="form-group">
+              <label for="environment">Job location type<span>*</span></label>
+              <input type="text" name="environment" placeholder="" class="" value="<?= $listing['work_environment'] ?? '' ?>"/>
+            </div>
+            <div class="form-group">
+              <label for="environment">Job location type<span>*</span></label>
+              <input type="text" name="company" placeholder="Company Name" class="" value="<?= $listing['company'] ?? '' ?>"/>
+            </div>
+            <div class="form-group">
+              <label for="environment">Job location type<span>*</span></label>
+              <input type="text" name="address" placeholder="Address" class="" value="<?= $listing['address'] ?? '' ?>"/>
+            </div>
+            <div class="form-group">
+              <label for="environment">Job location type<span>*</span></label>
+              <input type="text" name="city" placeholder="City" class="" value="<?= $listing['city'] ?? '' ?>"/>
+            </div>
+            <div class="form-group">
+              <label for="environment">State<span>*</span></label>
+              <input type="text" name="state" placeholder="" class="" value="<?= $listing['state'] ?? '' ?>"/>
+            </div>
+            <div class="form-group">
+              <label for="environment">Phone<span>*</span></label>
+              <input type="text" name="phone" placeholder="" class="" value="<?= $listing['phone'] ?? '' ?>"/>
+            </div>
+            <div class="form-group">
+              <label for="environment">Email<span>*</span></label>
+              <input type="text" name="email" placeholder="" class="" value="<?= $listing['email'] ?? '' ?>"/>
+            </div>
+            <button type="submit" class="">Save</button>
           </div>
-          <div class="mb-4">
-            <textarea
-              name="description"
-              placeholder="Job Description"
-              class=""
-              value="<?= $listing['description'] ?? '' ?>"
-            ></textarea>
-          </div>
-          <div class="mb-4">
-            <input
-              type="text"
-              name="salary"
-              placeholder="Annual Salary"
-              class=""
-              value="<?= $listing['salary'] ?? '' ?>"
-            />
-          </div>
-          <div class="mb-4">
-            <input
-              type="text"
-              name="requirements"
-              placeholder="Requirements"
-              class=""
-              value="<?= $listing['requirements'] ?? '' ?>"
-            />
-          </div>
-          <div class="mb-4">
-            <input
-              type="text"
-              name="benefits"
-              placeholder="Benefits"
-              class=""
-              value="<?= $listing['benefits'] ?? '' ?>"
-            />
-          </div>
-          <div class="mb-4">
-            <input
-              type="text"
-              name="tags"
-              placeholder="Tags"
-              class=""
-              value="<?= $listing['tags'] ?? '' ?>"
-            />
-          </div>
-          <div class="mb-4">
-            <input
-              type="text"
-              name="work environment"
-              placeholder="Work Environment"
-              class=""
-              value="<?= $listing['work_environment'] ?? '' ?>"
-            />
-          </div>
-          <h2 class="">
-            Company Info & Location
-          </h2>
-          <div class="mb-4">
-            <input
-              type="text"
-              name="company"
-              placeholder="Company Name"
-              class=""
-              value="<?= $listing['company'] ?? '' ?>"
-            />
-          </div>
-          <div class="mb-4">
-            <input
-              type="text"
-              name="address"
-              placeholder="Address"
-              class=""
-              value="<?= $listing['address'] ?? '' ?>"
-            />
-          </div>
-          <div class="mb-4">
-            <input
-              type="text"
-              name="city"
-              placeholder="City"
-              class=""
-              value="<?= $listing['city'] ?? '' ?>"
-            />
-          </div>
-          <div class="mb-4">
-            <input
-              type="text"
-              name="state"
-              placeholder="State"
-              class=""
-              value="<?= $listing['state'] ?? '' ?>"
-            />
-          </div>
-          <div class="mb-4">
-            <input
-              type="text"
-              name="phone"
-              placeholder="Phone"
-              class=""
-              value="<?= $listing['phone'] ?? '' ?>"
-            />
-          </div>
-          <div class="mb-4">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address For Applications"
-              class=""
-              value="<?= $listing['email'] ?? '' ?>"
-            />
-          </div>
-          <button
-            class=""
-          >
-            Save
-          </button>
         </form>
       <!-- </div> -->
     </section>
